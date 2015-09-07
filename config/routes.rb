@@ -1,56 +1,37 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # get 'playlists/show'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  root 'site#index'
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  # users 
+  get '/signup', to: 'users#new'
+  get '/profile', to: 'users#show'
+  resources :users, only: [:create, :edit, :update, :show]
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # sessions
+  get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
+  resources :sessions, only: [:create]
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  # results
+  get '/results', to: 'site#index'
+  get '/about', to: 'site#about'
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end
+
+
+
+  #            Prefix Verb URI Pattern                  Controller#Action
+  #      sessions_new GET  /sessions/new(.:format)      sessions#new
+  #   sessions_create GET  /sessions/create(.:format)   sessions#create
+  #  sessions_destroy GET  /sessions/destroy(.:format)  sessions#destroy
+  #        site_index GET  /site/index(.:format)        site#index
+  #     playlists_new GET  /playlists/new(.:format)     playlists#new
+  #    playlists_edit GET  /playlists/edit(.:format)    playlists#edit
+  #  playlists_update GET  /playlists/update(.:format)  playlists#update
+  #    playlists_show GET  /playlists/show(.:format)    playlists#show
+  # playlists_destroy GET  /playlists/destroy(.:format) playlists#destroy
+  #         users_new GET  /users/new(.:format)         users#new
+  #      users_create GET  /users/create(.:format)      users#create
+  #        users_show GET  /users/show(.:format)        users#show
