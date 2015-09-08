@@ -1,4 +1,5 @@
 class PlaylistsController < ApplicationController
+  
   def new
   end
 
@@ -13,4 +14,5 @@ class PlaylistsController < ApplicationController
 
   def destroy
   end
+  
 end

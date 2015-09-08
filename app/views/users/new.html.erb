@@ -1,2 +1,23 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<style>
+  body{
+    color:#E6E6E6;
+  }
+</style>
+
+<div class="col-sm-4 col-sm-offset-4">
+  <h4>Sign Up</h4><hr>
+   <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
+     <!-- username field -->
+     <%= f.label :username %>:
+     <%= f.text_field :user_name, class:"form-control" %>
+     <!-- password field -->
+     <%= f.label :password %>:
+     <%= f.password_field :password_digest, class:"form-control" %>
+
+     <!-- signup button -->
+    <%= f.submit "Sign Up", class: "btn btn-danger" %>
+
+  
+     
+  <% end %>
+</div>
