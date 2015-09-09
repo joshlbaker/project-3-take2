@@ -10,7 +10,7 @@ class MoodsController < ApplicationController
   end
 
   def show
-  	@mood = Mood.all
+  	@mood = Mood.find(params[:id])
   	render :json => @mood
   end
 
