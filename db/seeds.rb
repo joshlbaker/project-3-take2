@@ -7,13 +7,13 @@ u = User.create([
 
 # Mood data
 m = Mood.create([
-	{ name: 'Happy'},
-	{ name: 'Sad'},
-	{ name: 'Calm'},
-	{ name: 'Angry'},
-	{ name: 'Chill'},
-	{ name: 'Energetic'},
-	{ name: 'Excited'},
-	{ name: 'Lonely'},
-	{ name: 'Lazy'},
+	{ name: 'Happy', link: '/moods/happy'},
+	{ name: 'Sad', link: 'moods/sad'},
+	{ name: 'Calm', link: 'moods/calm'},
+	{ name: 'Angry', link: 'moods/angry'},
+	{ name: 'Chill', link: 'moods/chill'},
+	{ name: 'Energetic', link: 'moods/energetic'},
+	{ name: 'Excited', link: 'moods/excited'},
+	{ name: 'Lonely', link: 'moods/lonely'},
+	{ name: 'Lazy', link: 'moods/lazy'},
 	])

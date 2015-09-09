@@ -25,9 +25,9 @@
 		<div class="portfolio">
 			<% @moods.each do |i| %>
 		  <ul>
-		    <li><a href='#'></a>
+		    <li>
 		      <div class="caption">
-		        <h1><%= i.name %></h1>
+		        <a href="<%= i.link %>"><%= i.name %></a>
 		      </div>
 		    </li>
 		  </ul>

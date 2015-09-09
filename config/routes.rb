@@ -2,6 +2,19 @@ Rails.application.routes.draw do
 
   root 'moods#index'
 
+  get '/moods/happy', to: 'moods#happy'
+  get '/moods/sad', to: 'moods#sad'
+  get '/moods/calm', to: 'moods#calm'
+  get '/moods/angry', to: 'moods#angry'
+  get '/moods/chill', to: 'moods#chill'
+  get '/moods/energetic', to: 'moods#energetic'
+  get '/moods/excited', to: 'moods#excited'
+  get '/moods/lonely', to: 'moods#lonely'
+  get '/moods/lazy', to: 'moods#lazy'
+
+
+  resources :moods, only: [:show]
+
   # users 
   get '/signup', to: 'users#new'
   get '/profile', to: 'users#show'
