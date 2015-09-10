@@ -26,7 +26,7 @@
 
 body{
   /*background: #202838;*/
-  background: url("https://images.unsplash.com/photo-1420161900862-9a86fa1f5c79?q=80&fm=jpg&s=48506e8121d839e969fd2eb622af2c90");
+  background: url("https://images.unsplash.com/photo-1431069767777-c37892aa0a07?q=80&fm=jpg&s=b4bc9252163eaf5f7655c9e3c60b61e8");
   background-size: cover;
 }
 
@@ -134,7 +134,8 @@ h1{
     list-style:none;
     float:left;
     /*box-shadow:#000 0px 0px 10px;*/
-    border:2px solid #000;
+    border:2px solid black;
+
     position:relative;
     overflow:hidden;
     margin-right:10px;
@@ -160,10 +161,9 @@ h1{
 
 .caption{
   width:300px;
-  background:#FFF;
+  background:rgba(250, 250, 250, 0.3);
   /*margin-top:-5px;*/
   padding-bottom:10px;
-  opacity: 0.8;
   
   h1{
     color:black;
@@ -187,7 +187,7 @@ h1{
   }
 }
 .caption:hover{
-  opacity: 1;
+  background-color: rgba(250, 250, 250, 1)
 }
 
 .active-drag{
@@ -255,23 +255,27 @@ body > div.sidebar{
 .rw-sentence{
   margin: 0;
   text-align: left;
-  color:#B6B6B6;
+  color:white;
   /*text-shadow: 1px 1px 1px rgba(255,255,255,0.8);*/
 }
 .rw-sentence span{
-  color: #00FC76;
+  color: white;
   font-size: 200%;
   font-weight: normal;
 }
 .rw-words{
   display: inline;
-  text-indent: 10px;
+  /*color:white;*/
+  /*border-spacing: 5px;*/
+  /*text-indent: 10px;*/
 }
+
 .rw-words-1 span{
   position: absolute;
   opacity: 0;
   overflow: hidden;
-  color: #B6B6B6;
+  color: none;
+  
   -webkit-animation: rotateWord 18s linear infinite 0s;
   -ms-animation: rotateWord 18s linear infinite 0s;
   animation: rotateWord 18s linear infinite 0s;
@@ -280,33 +284,37 @@ body > div.sidebar{
     -webkit-animation-delay: 3s; 
   -ms-animation-delay: 3s; 
   animation-delay: 3s; 
-  color: #B6B6B6;
+  color: none;
+  
 }
 .rw-words-1 span:nth-child(3) { 
     -webkit-animation-delay: 6s; 
   -ms-animation-delay: 6s; 
   animation-delay: 6s; 
-  color: #B6B6B6; 
+  color: none;
+   
 }
 .rw-words-1 span:nth-child(4) { 
     -webkit-animation-delay: 9s; 
   -ms-animation-delay: 9s; 
   animation-delay: 9s; 
-  color: #B6B6B6;
+  color: none;
+  
 }
 .rw-words-1 span:nth-child(5) { 
     -webkit-animation-delay: 12s; 
   -ms-animation-delay: 12s; 
   animation-delay: 12s; 
-  color: #B6B6B6;
+  color: none;
+  
 }
 .rw-words-1 span:nth-child(6) { 
     -webkit-animation-delay: 15s; 
   -ms-animation-delay: 15s; 
   animation-delay: 15s; 
-  color: #B6B6B6;
+  color: none;
+  
 }
-
 
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }

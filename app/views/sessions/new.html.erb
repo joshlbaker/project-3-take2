@@ -1,2 +1,20 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<style>
+  body{
+    color:#E6E6E6;
+  }
+</style>
+<div class="portfolio container">
+  <h4>Log In</h4><hr>
+   <%= form_for @user do |f| %>
+     <!-- username field -->
+     <%= f.label :username %>:
+     <%= f.text_field :user_name, class:"form-control" %>
+     <!-- password field -->
+     <%= f.label :password %>:
+     <%= f.password_field :password_digest, class:"form-control" %>
+
+     <!-- signup button -->
+    <%= f.submit "Log In", class: "btn btn-danger" %>
+      
+  <% end %>
+</div>

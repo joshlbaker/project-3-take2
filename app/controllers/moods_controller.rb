@@ -155,4 +155,7 @@ class MoodsController < ApplicationController
           format.json{render json: @track}
     end
   end
+  def me
+    render :me
+  end
 end

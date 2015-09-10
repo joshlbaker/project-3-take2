@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/moods/excited', to: 'moods#excited'
   get '/moods/lonely', to: 'moods#lonely'
   get '/moods/lazy', to: 'moods#lazy'
+  get '/developer/me', to: 'moods#me'
 
 
   resources :moods, only: [:show]
